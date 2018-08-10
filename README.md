@@ -35,5 +35,6 @@ Consiste em um simples gerenciador de tarefas (Todo), com autenticação.
     - baixou e instalou os pacotes do hibernate, spring, conector do mysql, e alguns pacotes importantes para a comunicação em json
     - compilou o código
     - gerou um pacote resultante com o nome TodoManager.war na pasta target, dentro da pasta do projeto
-  - Testar o funcionamento do projeto
-  -- Acessar pelo chrome: http://localhost:8080/TodoManager/
+  - Testar o funcionamento do projeto:
+    - Copiar o arquivo TodoManager.war para a pasta (pasta onde descompactou o tomcat)\apache-tomcat-{versão que baixou}\webapps
+    - Acessar pelo chrome: http://localhost:8080/TodoManager/
