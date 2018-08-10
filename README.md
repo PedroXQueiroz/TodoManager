@@ -5,17 +5,17 @@ Projeto de referência de estudo para java web básico.
 Consiste em um simples gerenciador de tarefas (Todo), com autenticação.
 
 - Principais tecnologias utilizadas:
--- Hibernate
--- Spring/Spring MVC
--- Mysql
--- apache Tomcat
--- Tiles
+  - Hibernate
+  - Spring/Spring MVC
+  - Mysql
+  - apache Tomcat
+  - Tiles
 
 - Requisitos:
--- msysql: https://dev.mysql.com/downloads/mysql/
--- maven3: https://maven.apache.org/download.cgi (baixar o zip)
--- java8: http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html
--- tomcat: https://tomcat.apache.org/download-70.cgi
+  - msysql: https://dev.mysql.com/downloads/mysql/
+  - maven3: https://maven.apache.org/download.cgi (baixar o zip)
+  - java8: http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html
+  - tomcat: https://tomcat.apache.org/download-70.cgi
 
 - Configuração do ambiente:
   - Instalar o mysql, baixando no link indicado acima e seguindo os passos do instalador.
