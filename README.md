@@ -27,7 +27,7 @@ Consiste em um simples gerenciador de tarefas (Todo), com autenticação.
   - Instalar o tomcat:
     - baixar o tomcat no link indicado acima
     - descompactar na pasta que desejar
-    - testar a instalação, abrindo o prompt de comando em (pasta onde descompactou o tomcat)\apache-tomcat-7.0.50\bin e executando o comando: catalina.bat run
+    - testar a instalação, abrindo o prompt de comando em (pasta onde descompactou o tomcat)\apache-tomcat-{versão que baixou}\bin e executando o comando: catalina.bat run
     - quando uma mensagem similar a: INFORMAÃıES: Server startup in 9978 ms e nada mais ser escrito no prompt, acesse pelo chrome: localhost:8080. Caso esteja tudo ok, irá aparecer a página inicial do tomcat
   - No mysql, cria o banco de dados todo (da forma que achar mais conveniente, para tal, recomendo a instalação do workbench: https://dev.mysql.com/downloads/workbench/ )
   - No diretório raiz do projeto, onde o pom.xml está, abra o prompt de comando e execute o comando: mvn install
