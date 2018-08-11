@@ -27,15 +27,15 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/pages/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
+<!-- 	<bean -->
+<!-- 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+<!-- 		<property name="prefix"> -->
+<!-- 			<value>/WEB-INF/pages/</value> -->
+<!-- 		</property> -->
+<!-- 		<property name="suffix"> -->
+<!-- 			<value>.jsp</value> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
@@ -63,6 +63,20 @@
 				<prop key="hibernate.show_sql">true</prop>
 <!-- 				<prop key="hibernate.hbm2ddl.auto">create</prop> -->
 			</props>
+		</property>
+	</bean>
+	
+	<mvc:default-servlet-handler />
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
+	
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles-def.xml</value>
+			</list>
 		</property>
 	</bean>
 
