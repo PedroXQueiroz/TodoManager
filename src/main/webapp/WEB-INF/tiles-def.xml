@@ -7,12 +7,16 @@
     <definition name="DefaultTemplate" 
       template="/WEB-INF/pages/templates/template.jsp">
 		<put-attribute name="header" value="/WEB-INF/pages/templates/parts/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/pages/templates/parts/menu.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/templates/parts/side-menu.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/pages/templates/parts/footer.jsp" />
 	</definition>
 
 	<definition name="todoList" extends="DefaultTemplate">
 		<put-attribute name="body" value="/WEB-INF/pages/todo-list.jsp" />
+	</definition>
+	
+	<definition name="todoForm" extends="DefaultTemplate">
+		<put-attribute name="body" value="/WEB-INF/pages/todo-form.jsp" />
 	</definition>
 </tiles-definitions>

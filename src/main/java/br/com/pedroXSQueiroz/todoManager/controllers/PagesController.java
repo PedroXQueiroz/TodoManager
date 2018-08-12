@@ -13,5 +13,9 @@ public class PagesController {
 		return new ModelAndView("todoList");
 	}
 	
+	@RequestMapping("/todo/new")
+	public ModelAndView getTodoForm() {
+		return new ModelAndView("todoForm");
+	}
 	
 }

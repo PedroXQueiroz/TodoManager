@@ -1,0 +1,9 @@
+.form-container{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container .mdl-card{
+    margin: 50px;
+}

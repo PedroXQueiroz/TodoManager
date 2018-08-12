@@ -7,12 +7,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Todo Manager</title>
+		
+		<link rel="stylesheet" href="/TodoManager/resources/3rdparty/mdl/material.min.css"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<script src="/TodoManager/resources/3rdparty/mdl/material.min.js"></script>
+		<script src="/TodoManager/resources/3rdparty/handlebars/handlebars-v4.0.11.js"></script>
+		<script src="/TodoManager/resources/js/constants.js"></script>
 	</head>
 
 	<body>
-		<tiles:insertAttribute name="header"/>
-		<tiles:insertAttribute name="menu"/>
-		<tiles:insertAttribute name="body"/>
-		<tiles:insertAttribute name="footer"/>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			
+			<tiles:insertAttribute name="header"/>
+			<tiles:insertAttribute name="menu"/>
+			<tiles:insertAttribute name="body"/>
+<%-- 			<tiles:insertAttribute name="footer"/> --%>
+
+		</div>
 	</body>
 </html>
