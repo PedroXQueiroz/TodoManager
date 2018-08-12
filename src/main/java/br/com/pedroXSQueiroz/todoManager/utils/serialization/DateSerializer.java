@@ -28,7 +28,7 @@ public class DateSerializer extends StdSerializer<Date> {
 		// TODO Auto-generated method stub
 		
 		Locale languageTag = Locale.forLanguageTag("pt-BR");
-		DateFormat dateInstance = DateFormat.getDateInstance(DateFormat.SHORT, languageTag);
+		DateFormat dateInstance = DateFormat.getDateInstance(DateFormat.DEFAULT, languageTag);
 		String localeDateString = dateInstance.format(value);
 		
 		//jgen.writeStartObject();

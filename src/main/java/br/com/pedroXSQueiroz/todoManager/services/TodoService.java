@@ -23,10 +23,14 @@ public class TodoService {
 	public List<Todo> readTodos(){
 		return this.dao.list();
 	}
+	
+	@Transactional
+	public Todo readTodo(int id) {
+		return this.dao.read(id);
+	}
 
 	@Transactional
 	public int insertTodo(Todo bean) {
-		// TODO Auto-generated method stub
 		
 		Todo insertedBean = this.dao.insert(bean);
 		
@@ -35,7 +39,6 @@ public class TodoService {
 
 	@Transactional
 	public void updateTodo(Todo bean) {
-		// TODO Auto-generated method stub
 		
 		this.dao.update(bean); 
 		
@@ -43,7 +46,6 @@ public class TodoService {
 
 	@Transactional
 	public void delete(int id) {
-		// TODO Auto-generated method stub
 		
 		Todo bean = this.dao.read(id);
 		

@@ -13,7 +13,7 @@
 		  	</div>
 		  	
 		  	<div class="mdl-textfield mdl-js-textfield">
-			    <input class="mdl-textfield__input" type="date" id="deadline" placeholder="">
+			    <input class="mdl-textfield__input" type="date" id="deadline" placeholder="" pattern="dd/mm/yyyy">
 			    <label class="mdl-textfield__label" for="deadline">Feito até:</label>
 		  	</div>
 			

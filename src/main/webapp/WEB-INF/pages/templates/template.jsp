@@ -14,6 +14,7 @@
 		<script src="/TodoManager/resources/3rdparty/mdl/material.min.js"></script>
 		<script src="/TodoManager/resources/3rdparty/handlebars/handlebars-v4.0.11.js"></script>
 		<script src="/TodoManager/resources/js/constants.js"></script>
+		<script src="/TodoManager/resources/3rdparty/moment/moment.min.js"></script>
 	</head>
 
 	<body>

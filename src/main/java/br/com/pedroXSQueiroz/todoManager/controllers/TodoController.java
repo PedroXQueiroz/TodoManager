@@ -28,9 +28,16 @@ public class TodoController {
 	
 	@RequestMapping(value = "/", method =  RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public List<Todo> getTodo()
+	public List<Todo> getTodos()
 	{
 		return this.service.readTodos();		
+	}
+	
+	@RequestMapping(value = "/{id}", method =  RequestMethod.GET, produces = "application/json")
+	@ResponseBody
+	public Todo getTodo(@PathVariable("id") int id)
+	{
+		return this.service.readTodo(id);		
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json")
