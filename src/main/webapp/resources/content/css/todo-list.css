@@ -7,6 +7,18 @@
     grid-auto-rows: 200px 200px;
 }
 
+.todo-card .todo-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-card .mdl-card__actions{
+	bottom: 0;
+    position: absolute; 
+    display: flex;
+    justify-content: flex-end;
+}
+
 .add-todo-button{
     position: fixed;
     bottom:10px;

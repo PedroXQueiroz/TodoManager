@@ -18,21 +18,36 @@ var TodoList = function(containerId){
         
         var todosRequest = new Request(CONSTANTS.todosUrl);        
 
+        var that = this;
+        
         fetch(todosRequest)
         .then(response => response.json())
         .then(todos => {
-            for(todo of todos){
-                var currentTodoCard = this._cardTemplate(todo);
-                this._container.innerHTML += currentTodoCard;
+            for(let todo of todos){
+                
+            	let currentTodoCard = this._cardTemplate(todo);
+                let currentTodoCardElement = document.createElement('div');
+                currentTodoCardElement.innerHTML = currentTodoCard; 
+                
+                let editTodoButton = currentTodoCardElement.querySelector(".edit-todo");
+                editTodoButton.onclick = function(){
+                	document.location.pathname = "TodoManager/todo/edit/" + todo.id;
+                }
+                 
+                let deleteTodoButton = currentTodoCardElement.querySelector(".remove-todo");
+                deleteTodoButton.onclick = function(){
+                	let deleteTodoRequest = new Request(CONSTANTS.todosUrl + todo.id, {method:'DELETE'});
+                	
+                	fetch(deleteTodoRequest)
+                	.then(() => {
+                		that._clean();
+                		that._populate();
+                	});
+                }
+                
+                this._container.appendChild(currentTodoCardElement);
             }
         });
-    }
-    
-    this._addTodoList = function(todoData){
-    	
-    	var currentCard = this._cardTemplate(todoData);
-    	
-    	this._container.innerHTML += currentCard;
     }
     
     this._init();
