@@ -16,11 +16,27 @@
 	bottom: 0;
     position: absolute; 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-.add-todo-button{
-    position: fixed;
-    bottom:10px;
-    right:10px;
+.todo-card .mdl-card__actions .edition-painel{
+    display: flex;
+}
+
+.todo-card .mdl-card__actions .done-painel{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.todo-list-footer{
+	position:fixed;
+	width: 100%;
+	bottom: 0px;
+	display:flex;
+	justify-content: flex-end;
+}
+
+.todo-list-footer .add-todo-button{
+	margin:10px;
 }

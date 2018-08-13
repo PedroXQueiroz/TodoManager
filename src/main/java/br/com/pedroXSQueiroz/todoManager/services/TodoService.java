@@ -52,5 +52,15 @@ public class TodoService {
 		this.dao.delete(bean);
 		
 	}
+
+	@Transactional
+	public Todo setTodoDoneState(int id, boolean done) {
+		
+		Todo todo = this.dao.read(id);
+		todo.setDone(done);
+		this.updateTodo(todo);
+		
+		return todo;
+	}
 	
 }

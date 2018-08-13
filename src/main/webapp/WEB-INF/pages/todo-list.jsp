@@ -10,13 +10,22 @@
         </div>
 
 		<div class="mdl-card__actions mdl-card--border">
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored edit-todo">
-                <i class="material-icons">edit</i>
-            </button>
+            <div class="done-painel">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="done-{{id}}">
+                    <input type="checkbox" id="done-{{id}}" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label">Pronto</span>
+                </label>
+            </div>
 
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored remove-todo">
-                <i class="material-icons">close</i>
-            </button>
+            <div class="edition-painel">
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored edit-todo">
+                    <i class="material-icons">edit</i>
+                </button>
+
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored remove-todo">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
         </div>
     </div>
 </script>
@@ -24,9 +33,11 @@
 <div id="todo-list-container" class="grid-container">
 </div>
 
-<button id="add-todo-btn" class="add-todo-button mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-    <i class="material-icons">add</i>
-</button>
+<div class="todo-list-footer">
+	<button id="add-todo-btn" class="add-todo-button mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+	    <i class="material-icons">add</i>
+	</button>
+</div>
 
 <script src="/TodoManager/resources/js/todo/todo-list.js"></script>
 <link rel="stylesheet" href="/TodoManager/resources/content/css/todo-list.css"/>

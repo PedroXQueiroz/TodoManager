@@ -68,4 +68,10 @@ public class TodoController {
 		
 	}
 	
+	@RequestMapping(value = "/{id}/done/{done}", method = RequestMethod.POST, produces = "application/json")
+	@ResponseBody
+	public Todo setDoneState(@PathVariable("id") int id, @PathVariable("done") boolean done) {
+		return this.service.setTodoDoneState(id, done);
+	}
+	
 }

@@ -45,6 +45,18 @@ var TodoList = function(containerId){
                 	});
                 }
                 
+                let doneCheck = currentTodoCardElement.querySelector("#done-" + todo.id);
+                doneCheck.checked = todo.done;
+                doneCheck.onchange = function($event){
+                	let isDone = $event.target.checked;
+                	
+                	let updateDoneStateRequest = new Request(CONSTANTS.todosUrl + todo.id + "/done/" + isDone, {
+                		method: "POST"
+                	});
+                	
+                	fetch(updateDoneStateRequest);
+                }
+                
                 this._container.appendChild(currentTodoCardElement);
             }
         });
