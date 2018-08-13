@@ -8,10 +8,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Todo Manager</title>
 		
-		<link rel="stylesheet" href="/TodoManager/resources/3rdparty/mdl/material.min.css"/>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		
-		<script src="/TodoManager/resources/3rdparty/mdl/material.min.js"></script>
 		<script src="/TodoManager/resources/3rdparty/handlebars/handlebars-v4.0.11.js"></script>
 		<script src="/TodoManager/resources/js/constants.js"></script>
 		<script src="/TodoManager/resources/3rdparty/moment/moment.min.js"></script>
@@ -22,9 +18,18 @@
 			
 			<tiles:insertAttribute name="header"/>
 			<tiles:insertAttribute name="menu"/>
-			<tiles:insertAttribute name="body"/>
+			
+			<main class="mdl-layout__content">
+				<tiles:insertAttribute name="body"/>
+			</main>
 <%-- 			<tiles:insertAttribute name="footer"/> --%>
 
 		</div>
+		
+		<!-- Material Design Lite -->
+	    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	    <!-- Material Design icon font -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</body>
 </html>

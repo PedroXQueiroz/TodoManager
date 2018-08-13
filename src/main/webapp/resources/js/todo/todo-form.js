@@ -23,8 +23,8 @@ var TodoForm = function(id){
 			that._nameInput.value = todo.name;
 			that._deadlineInput.value = moment(todo.deadline, "DD/MM/YYYY").format("YYYY-MM-DD");
 			that._descriptionInput.value = todo.description;
-			that._currentTodoId = todo.id;
-		});
+			that._currentTodoId = todo.id;			
+		})
 	}
 	
 	this._onCreateTodo = function($event){
@@ -89,4 +89,6 @@ function initTodoForm(){
 	
 }
 
-initTodoForm();
+document.addEventListener("DOMContentLoaded", function(event) { 
+	initTodoForm();
+});
