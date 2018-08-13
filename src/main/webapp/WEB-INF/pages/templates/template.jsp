@@ -11,6 +11,8 @@
 		<script src="/TodoManager/resources/3rdparty/handlebars/handlebars-v4.0.11.js"></script>
 		<script src="/TodoManager/resources/js/constants.js"></script>
 		<script src="/TodoManager/resources/3rdparty/moment/moment.min.js"></script>
+		
+		<link rel="stylesheet" href="/TodoManager/resources/content/css/template.css">
 	</head>
 
 	<body>
@@ -25,11 +27,9 @@
 <%-- 			<tiles:insertAttribute name="footer"/> --%>
 
 		</div>
-		
-		<!-- Material Design Lite -->
-	    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	    <!-- Material Design icon font -->
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    
+	    <script src="/TodoManager/resources/3rdparty/mdl/material.min.js"></script>
+	    <link rel="stylesheet" href="/TodoManager/resources/3rdparty/mdl/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</body>
 </html>
